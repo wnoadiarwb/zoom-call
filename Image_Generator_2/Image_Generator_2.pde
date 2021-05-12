@@ -1,6 +1,8 @@
 
 String imgURL = "https://fakeface.rest/thumb/view";
 
+// returns a zoom caller
+
 PGraphics pg;
 
 //int numFaces = int(random(10))+1;
@@ -86,7 +88,7 @@ void draw() {
     // randomly rotate
     //rotate(random(-0.5,0.5)*PI/3);
     
-    images[i] = blur_crop(images[i], 0.5);
+    images[i] = blur_crop(images[i], 0.4);
     images[i].resize(imageWidth,imageHeight);
     noodle(imageX, imageY, imageWidth, imageHeight);
     image(images[i], imageX, imageY);
@@ -101,8 +103,8 @@ void draw() {
     filter(BLUR, 6);
     
     frame++;
-    save("/Users/ottobenson/Documents/Processing/grid/images/" + frame + ".png");
-    print("\nImage saved: /Users/ottobenson/Documents/Processing/grid/ " + frame + ".png");   
+    save("/Users/ottobenson/Documents/GitHub/zoom-call/grid/images/" + frame + ".png");
+    print("\nImage saved: /Users/ottobenson/Documents/GitHub/zoom-call/grid " + frame + ".png");   
   }
   }
   

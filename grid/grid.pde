@@ -2,10 +2,12 @@ import java.util.Date;
 static int image_size = 512;
 static int num_rows = 6;
 
+//returns a grid of images
+
 void setup() {
   // image_size * num_rows (doesnt accept variables)
   size(3072,3072);
-
+  
   // Using just the path of this sketch to demonstrate,
   // but you can list any directory you like.
   String path = sketchPath() + "/images";
@@ -14,7 +16,7 @@ void setup() {
   String[] filenames = listFileNames(path);
   String[] newfilenames = listFileNames(path);
   printArray(filenames);
-
+  print("press s to save image");
 
   File[] files = listFiles(path);
   
